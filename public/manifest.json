@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Side Panel template",
+  "description": "Side panel starter template",
+  "version": "0.0.1",
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "permissions": ["sidePanel"],
+  "action": {
+    "default_title": "Side Panel"
+  },
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "assets/background.bundle.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["assets/main.bundle.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
